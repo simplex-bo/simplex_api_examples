@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Simplex API examples",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

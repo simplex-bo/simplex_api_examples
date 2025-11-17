@@ -1,0 +1,28 @@
+meta {
+  name: Get Emission Type
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/v1/api/invoice_catalogs/:company_id?catalog=ParametricaTipoEmision
+  body: none
+  auth: inherit
+}
+
+params:query {
+  catalog: ParametricaTipoEmision
+}
+
+params:path {
+  company_id: 1
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

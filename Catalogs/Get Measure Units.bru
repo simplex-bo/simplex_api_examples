@@ -1,0 +1,28 @@
+meta {
+  name: Get Measure Units
+  type: http
+  seq: 12
+}
+
+get {
+  url: http://localhost:8000/v1/api/parametric_catalogs/:company_id?catalog=ParametricaUnidadMedida
+  body: none
+  auth: inherit
+}
+
+params:query {
+  catalog: ParametricaUnidadMedida
+}
+
+params:path {
+  company_id: 1
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}
