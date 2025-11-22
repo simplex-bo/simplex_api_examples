@@ -1,0 +1,24 @@
+meta {
+  name: List Clients
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/v1/api/companies/:company_id/clients
+  body: none
+  auth: none
+}
+
+params:path {
+  company_id: 2
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

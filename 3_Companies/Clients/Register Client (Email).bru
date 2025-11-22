@@ -1,0 +1,33 @@
+meta {
+  name: Register Client (Email)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/v1/api/companies/:company_id/clients
+  body: json
+  auth: inherit
+}
+
+params:path {
+  company_id: 2
+}
+
+headers {
+  accept: application/json
+}
+
+body:json {
+  {
+    "codigo_tipo_documento_identidad": 1,
+    "numero_documento": "3333",
+    "nombre_razon_social": "Jose Laruta",
+    "correo_electronico": "edusardo.laruta@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Create Category
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/v1/api/categories/
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "test_category",
+    "description": "test category"
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

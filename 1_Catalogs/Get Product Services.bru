@@ -1,0 +1,24 @@
+meta {
+  name: Get Product Services
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/v1/api/service_catalogs/1?catalog=ListaProductosServicios
+  body: none
+  auth: inherit
+}
+
+params:query {
+  catalog: ListaProductosServicios
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

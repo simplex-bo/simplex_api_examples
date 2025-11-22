@@ -1,0 +1,26 @@
+meta {
+  name: Upload Products
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{host}}/v1/api/products/upload
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Authorization: Bearer 44b8f042-68c9-4677-b2cc-a392c6993561
+  Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  file: @file(/Users/jose.laruta/dev/simplex/simplex_api/tests/tests/resources/test_products.csv)
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

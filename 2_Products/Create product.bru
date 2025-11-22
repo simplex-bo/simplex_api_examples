@@ -1,0 +1,40 @@
+meta {
+  name: Create product
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/v1/api/products/
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "code": "MEDIC_SERV_1",
+    "sin_product_code": 93121,
+    "sin_activity": "862010",
+    "description": "MEDICAL SERVICE",
+    "unit_price": 1000.0,
+    "measure_unit": "UNIT",
+    "provider": "SELF",
+    "company": 2,
+    "branch": 2,
+    "category": 1,
+    "sin_measure_unit_code": 58,
+    "metadata": {},
+    "discount": 0,
+    "stock": 0
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

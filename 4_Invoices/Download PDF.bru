@@ -1,0 +1,24 @@
+meta {
+  name: Download PDF
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/v1/api/invoices/pdfs/:cuf
+  body: none
+  auth: inherit
+}
+
+params:path {
+  cuf: 1AD289C2FC6F33C2D38392EEB9AE938B327F0606B025EC56609942F74
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

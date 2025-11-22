@@ -1,0 +1,38 @@
+meta {
+  name: Emit
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/v1/api/invoices/emit
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "product_qtys": [
+      {
+        "product_id": 1,
+        "quantity": 2
+      }
+    ],
+    "client_id": 1,
+    "pos_id": 1,
+    "gift_card_amount": 0,
+    "additional_discount": 0,
+    "change_rate": 1,
+    "payment_method_code": 1
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

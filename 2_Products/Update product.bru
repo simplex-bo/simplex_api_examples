@@ -1,0 +1,33 @@
+meta {
+  name: Update product
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{host}}/v1/api/products/:product_id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  product_id: 2
+}
+
+headers {
+  accept: application/json
+  Authorization: Bearer 8d8dbc71-0067-42f1-98da-188ca9cd6d0f
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "code": "new_code",
+    "sin_activity": "001220"
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}
