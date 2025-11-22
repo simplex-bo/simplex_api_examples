@@ -1,7 +1,7 @@
 meta {
   name: Emit Explicit
   type: http
-  seq: 2
+  seq: 4
 }
 
 post {
@@ -17,29 +17,25 @@ headers {
 
 body:json {
   {
+    "pos_id": 2,
     "data": {
       "name": "juan perez",
       "email": "eduardo.laruta@gmail.com",
-      "emission_code": 1,
-      "invoice_type": 1,
       "identity_doc_code": 2,
       "identity_doc": "1234",
       "client_code": "asdf123",
       "payment_method_code": 1,
       "total_amount": 10,
       "total_amount_for_iva": 10,
-      "currency_code": 1,
-      "change_rate": 1,
       "total_amount_currency": 10,
       "gift_card_amount": 0,
       "additional_discount": 0,
-      "legend": "",
       "items": [
         {
-          "economic_activity": "620000",
-          "sin_product_code": 83143,
-          "product_code": "asdf123",
-          "description": "asdfasdf",
+          "economic_activity": "862010",
+          "sin_product_code": 93121,
+          "product_code": "PRODUCT_CLINIC1",
+          "description": "SERVICE",
           "quantity": 1,
           "measure_unit": 1,
           "unit_price": 10,
@@ -47,8 +43,7 @@ body:json {
           "sub_total": 10
         }
       ]
-    },
-    "pos_id": 1
+    }
   }
 }
 

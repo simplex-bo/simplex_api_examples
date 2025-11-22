@@ -5,13 +5,17 @@ meta {
 }
 
 get {
-  url: {{host}}/v1/api/service_catalogs/1?catalog=ListaProductosServicios
+  url: {{host}}/v1/api/service_catalogs/:company_id?catalog=ListaProductosServicios
   body: none
   auth: inherit
 }
 
 params:query {
   catalog: ListaProductosServicios
+}
+
+params:path {
+  company_id: 2
 }
 
 headers {

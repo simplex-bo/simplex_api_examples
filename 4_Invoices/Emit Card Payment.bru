@@ -1,0 +1,39 @@
+meta {
+  name: Emit Card Payment
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/v1/api/invoices/emit
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "product_qtys": [
+      {
+        "product_id": 8,
+        "quantity": 2
+      }
+    ],
+    "client_id": 5,
+    "pos_id": 2,
+    "gift_card_amount": 0,
+    "additional_discount": 0,
+    "change_rate": 1,
+    "payment_method_code": 2,
+    "card_number": 444433332222
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}
