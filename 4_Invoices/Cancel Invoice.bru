@@ -1,0 +1,25 @@
+meta {
+  name: Cancel Invoice
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{host}}/v1/api/invoices/cancel/:cuf/reason/:reason
+  body: none
+  auth: inherit
+}
+
+params:path {
+  reason: 2
+  cuf: 1AD289C2FC6F34B2A8AB31161F781229E36A1FF74F0C511305BA42F74
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

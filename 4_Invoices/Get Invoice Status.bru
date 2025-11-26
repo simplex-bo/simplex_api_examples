@@ -1,0 +1,24 @@
+meta {
+  name: Get Invoice Status
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{host}}/v1/api/invoices/status/:cuf
+  body: none
+  auth: inherit
+}
+
+params:path {
+  cuf: 1AD289C2FC6F34B223F5F33ECB230A1672A933CD7361540A34BA42F74
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}
